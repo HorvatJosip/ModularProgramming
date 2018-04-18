@@ -1,0 +1,22 @@
+﻿body {
+    width: 75%;
+    margin: 30px auto 0;
+}
+
+.menu > ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu > ul > li {
+    display: inline-block;
+}
+
+section{
+    
+}
+
+.selected{
+    background: #0094ff;
+    color: white;
+}

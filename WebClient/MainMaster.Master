@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MainMaster.master.cs" Inherits="WebClient.MainMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Master</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/Main.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <header>
+                <nav class="menu">
+                    <ul>
+                        <li>
+                            <%--CssClass="selected"--%>
+                            <asp:Button Text="Home" runat="server" ID="btnHome" PostBackUrl="~/Default.aspx" />
+                        </li>
+                        <li>
+                            <asp:Button Text="Fill form" runat="server" ID="btnFill" PostBackUrl="~/Modules/TestFormModule.aspx" />
+                        </li>
+                        <li>
+                            <asp:Button Text="About" runat="server" ID="btnAbout" PostBackUrl="~/About.aspx" />
+                        </li>
+                        <li>
+                            <asp:Button Text="Contact" runat="server" ID="btnContact" PostBackUrl="~/Contact.aspx" />
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            <section>
+                <asp:ContentPlaceHolder ID="Content" runat="server">
+                </asp:ContentPlaceHolder>
+            </section>
+
+            <footer class="text-center">
+                <hr />
+                <asp:Label Text="Modular Programming" runat="server" CssClass="text-center" />
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
