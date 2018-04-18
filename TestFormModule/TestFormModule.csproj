@@ -74,7 +74,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="FormModule\TestFormModule.aspx" />
+    <EmbeddedResource Include="FormModule\TestFormModule.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -94,6 +94,12 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebClient\WebClient.csproj">
+      <Project>{f3d3a668-79c8-48d1-aa8a-ef08f65908b0}</Project>
+      <Name>WebClient</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

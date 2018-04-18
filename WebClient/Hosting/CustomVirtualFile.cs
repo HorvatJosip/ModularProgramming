@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Reflection;
 using System.Web;
 using System.Web.Hosting;
 
@@ -16,11 +17,14 @@ namespace WebClient.Hosting
 
         public override Stream Open()
         {
+            //assembly location, aspx inside assembly location
             var data = HostingUtils.ParseVirtualPath(path);
 
+            var ass = Assembly.LoadFile(data.Key);
 
+            var aspxStream = ass.GetManifestResourceStream(data.Value);
 
-            throw new NotImplementedException();
+            return aspxStream;
         }
     }
 }

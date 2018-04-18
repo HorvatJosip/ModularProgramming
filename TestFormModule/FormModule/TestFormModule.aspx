@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TestFormModule.aspx.cs" Inherits="TestFormModule.FormModule.TestFormModule" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TestFormModule.aspx.cs" Inherits="TestFormModule.FormModule.TestFormModule" %>
 
 <!DOCTYPE html>
 
@@ -8,7 +8,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div style="width: 100px; height: 100px; background: #ccc;">
         </div>
     </form>
 </body>
